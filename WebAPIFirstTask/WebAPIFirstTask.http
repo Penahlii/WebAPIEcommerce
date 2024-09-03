@@ -1,0 +1,6 @@
+@WebAPIFirstTask_HostAddress = http://localhost:5044
+
+GET {{WebAPIFirstTask_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
