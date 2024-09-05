@@ -82,11 +82,11 @@ public class OrdersController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteOrder(int id)
     {
-        var order = await _orderService.GetById(id);
+        var order = await _orderService.GetByIdAsync(id);
         if (order == null)
             return NotFound();
 
-        await _orderService.Delete(order);
+        await _orderService.DeleteAsync(order);
         return NoContent();
     }
 }
